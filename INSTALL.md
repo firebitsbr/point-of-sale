@@ -15,7 +15,7 @@ Here we cover the installation and configuration of software and hardware from s
 - while the "logic" (how it operates) of the application is written using Go, we're also going to need a database to store & retrieve information as required by the application. We're using MySQL is the world's most popular open source database. The SQL stands for "Structured Query Language". Within the Go code we connect and "talk to" the MySQL server. It is also possible to talk to the MySQL server via the MySQL command line tool.
 - run `sudo apt-get install mysql-server`; you'll be prompted for a root password. Choose a strong one and remember it/write it down
 - to ensure a secure installation, run `mysql_secure_installation` and enter `Y` all the way down.
-- now we need to tell MySQL to create a new database; run `mysql -u root -p -e "CREATE DATABASE myBusiness` 
+- now we need to tell MySQL to create a new database; run `mysql -u root -p -e "CREATE DATABASE myBusiness" 
 - with the database in existence, we can then load the sample.sql file: `mysql -u root -p myBusiness < sample.sql`. This file contains MySQL tables (visits, transactions, items) used by the Go application to manage each category. Once the database is loaded, you can edit the rows manually from the `mysql` tool. For your custom application, you'll definitely want to edit the `items` tables to contain the food/drink/miscellaneous items that you plan on selling.
 
 ### Get the source code
